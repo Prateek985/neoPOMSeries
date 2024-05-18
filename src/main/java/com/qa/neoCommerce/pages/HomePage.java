@@ -58,10 +58,11 @@ public class HomePage {
         return eleutil.ElementIsDisplayed(MyAccountlink);
     }
 
-    public void doSearch(String searchkey){
+    public SearchResultsPage doSearch(String searchkey){
         System.out.println("searching for : " +searchkey);
         eleutil.doSendkeys(searchTextfield, searchkey);
         eleutil.doclick(searchButton);
+        return new SearchResultsPage(driver);
     }
 
 

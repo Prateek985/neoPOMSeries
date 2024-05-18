@@ -11,26 +11,25 @@ public class HomePageTest extends BaseTest {
 
 
     @BeforeClass
-    public void Homesetup(){
-        homepage = lp.doLoginMethod(prop.getProperty("username"), prop.getProperty("password") );
+    public void Homesetup() {
+        homepage = lp.doLoginMethod(prop.getProperty("username"), prop.getProperty("password"));
 
     }
 
     @Test(priority = 1)
-    public void HomePageTitleTest(){
+    public void HomePageTitleTest() {
         String actualTitle = homepage.getHomePageTitle();
         Assert.assertEquals(actualTitle, Appconstants.HOME_PAGE_TITLE);
     }
 
     @Test(priority = 2)
-    public void HomePageUrlTest(){
+    public void HomePageUrlTest() {
         String actualurl = homepage.getHomePageURL();
         Assert.assertTrue(actualurl.contains(Appconstants.HOME_PAGE_URL_FRACTION));
     }
 
     @Test(priority = 3)
-    public void isLogoutLinkExitTest()
-    {
+    public void isLogoutLinkExitTest() {
         Assert.assertTrue(homepage.isLogoutLinkExit());
     }
 
@@ -41,7 +40,7 @@ public class HomePageTest extends BaseTest {
     }
 
     @Test(priority = 5)
-    public void isWelcomeHeaderExitTest(){
+    public void isWelcomeHeaderExitTest() {
         Assert.assertTrue(homepage.isWelcomeHeaderExit());
     }
 

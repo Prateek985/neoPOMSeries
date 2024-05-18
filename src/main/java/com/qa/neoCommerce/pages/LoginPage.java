@@ -1,6 +1,7 @@
 package com.qa.neoCommerce.pages;
 
 import com.qa.neoCommerce.Utils.Element_utils;
+import com.qa.opencart.contants.Appconstants;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -26,13 +27,13 @@ public class LoginPage {
 
     //3. public Page actions/ methods
     public String getLoginPageTitle(){
-        String Title = eleutil.waitForTitleIs("nopCommerce demo store. Login",5);
+        String Title = eleutil.waitForTitleIs(Appconstants.LOGIN_PAGE_TITLE,5);
         System.out.println("login page Title :" + Title);
         return Title;
     }
 
     public String getLoginPageURL(){
-        String URL = eleutil.waitForUrlContains("login?returnUrl=%2F",5);
+        String URL = eleutil.waitForUrlContains(Appconstants.LOGIN_PAGE_URL_FRACTION,5);
         System.out.println("login page URL :" + URL);
         return URL;
     }
@@ -51,13 +52,13 @@ public class LoginPage {
         return eleutil.ElementIsDisplayed(RegisterBtn);
     }
 
-    public String doLoginMethod(String Username, String pwd){
+    public HomePage doLoginMethod(String Username, String pwd){
         System.out.println("user Credentils : " + Username + " & " +pwd);
         eleutil.waitForElementVisible(emailid,10).sendKeys(Username);
         eleutil.doSendkeys(password,pwd);
         eleutil.doclick(RememberMe);
         eleutil.doclick(loginButton);
-        return eleutil.waitForTitleIs("nopCommerce demo store",5);
+        return new HomePage(driver);
     }
 
 }
