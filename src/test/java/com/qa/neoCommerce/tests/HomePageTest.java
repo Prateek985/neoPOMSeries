@@ -12,7 +12,7 @@ public class HomePageTest extends BaseTest {
 
     @BeforeClass
     public void Homesetup(){
-        homepage = lp.doLoginMethod(prop.getProperty("username"), prop.getProperty("password") );
+        homepage = lp.doLoginMethod(prop.getProperty("username"), prop.getProperty("password"));
 
     }
 

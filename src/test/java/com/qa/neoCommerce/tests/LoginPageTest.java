@@ -35,8 +35,8 @@ public class LoginPageTest extends BaseTest {
 
     @Test(priority = 6)
     public void loginTest(){
-        String actPageTitle = lp.doLoginMethod("davidbiber214@gmail.com", "David@123");
-        Assert.assertEquals(actPageTitle,"nopCommerce demo store");
+        homepage = lp.doLoginMethod("davidbiber214@gmail.com", "David@123");
+        Assert.assertEquals(homepage.getHomePageTitle(),"nopCommerce demo store");
 
     }
 

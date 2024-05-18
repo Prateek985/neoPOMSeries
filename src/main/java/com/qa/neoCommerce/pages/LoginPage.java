@@ -51,13 +51,13 @@ public class LoginPage {
         return eleutil.ElementIsDisplayed(RegisterBtn);
     }
 
-    public String doLoginMethod(String Username, String pwd){
+    public HomePage doLoginMethod(String Username, String pwd){
         System.out.println("user Credentils : " + Username + " & " +pwd);
         eleutil.waitForElementVisible(emailid,10).sendKeys(Username);
         eleutil.doSendkeys(password,pwd);
         eleutil.doclick(RememberMe);
         eleutil.doclick(loginButton);
-        return eleutil.waitForTitleIs("nopCommerce demo store",5);
+        return new HomePage(driver);
     }
 
 }

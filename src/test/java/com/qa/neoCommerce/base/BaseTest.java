@@ -1,7 +1,9 @@
 package com.qa.neoCommerce.base;
 
 import com.qa.neoCommerce.factory.DriverFactory;
+import com.qa.neoCommerce.pages.HomePage;
 import com.qa.neoCommerce.pages.LoginPage;
+import com.qa.neoCommerce.pages.SearchResultsPage;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -14,6 +16,10 @@ public class BaseTest {
     DriverFactory df;
     protected Properties prop;
     protected LoginPage lp;
+
+    protected HomePage homepage;
+
+    protected SearchResultsPage searchresult;
 
     @BeforeTest
     public void setup(){
