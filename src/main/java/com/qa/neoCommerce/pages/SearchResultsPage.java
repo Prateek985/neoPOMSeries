@@ -11,6 +11,7 @@ public class SearchResultsPage {
     //1. Private By Locator
     private By searchproducts = By.cssSelector("div.product-item");
 
+
     //2. public page class constructor
     public SearchResultsPage(WebDriver driver){
         this.driver = driver;
@@ -25,5 +26,11 @@ public class SearchResultsPage {
         String URL = eleutil.waitForUrlContains(Appconstants.Search_PAGE_URL_FRACTION,5);
         System.out.println("Home page URL :" + URL);
         return URL;
+    }
+
+    public ProductInfoPage selectProduct(String ProductName){
+        System.out.println("Searching for Product: " + ProductName);
+        eleutil.waitForElementVisible(By.linkText(ProductName), 10).click();
+        return new ProductInfoPage(driver);
     }
 }
