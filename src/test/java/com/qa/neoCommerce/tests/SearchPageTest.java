@@ -15,13 +15,13 @@ public class SearchPageTest extends BaseTest {
     }
 
     @Test
-    public void searchResultsTest(){
+    public void searchResultsImageCountTest(){
         searchresult = homepage.doSearch("Desktop");
         Assert.assertEquals(searchresult.getSearchProductCount(),3);
     }
 
     @Test
-    public void searchResultsURLTest(){
+    public void searchResultsURLPageTest(){
         String searchURL = searchresult.getSearchResultPageURL();
         Assert.assertTrue(searchURL.contains(Appconstants.Search_PAGE_URL_FRACTION));
 

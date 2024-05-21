@@ -49,27 +49,30 @@ we dont want to define verbose any where it is defined already in testng        
 		</classes>
 	</test>
 
-	<!--<test name="Product Info Page Test">
-		<parameter name="browser" value="firefox" />
+	<test name="Product Info Page Test">
+	<!--	<parameter name="browser" value="firefox" />
 		<parameter name="browserversion" value="124.0" />
-		<parameter name="testname" value="OpenCartTeam-Product Info Page Test" />
+		<parameter name="testname" value="OpenCartTeam-Product Info Page Test" /> -->
 		
 
 
 		<classes>
-			<class name="com.qa.opencartTest.ProductPageInfoTest" />
+			<class name="com.qa.neoCommerce.tests.ProductInfoPageTest" />
 		</classes>
 	</test>
-		<test name="Register Page Test">
-		<parameter name="browser" value="firefox" />
-		 	<parameter name="url"
-			value="https://www.orangehrm.com/30-day-free-trial/" />
-		<parameter name="headless" value="true" />     
 
 
-		<classes>
-			<class name="com.qa.opencartTest.RegisterationPageTest" />
-		</classes>
-	</test>-->
+	<!--	</test>
+            <test name="Register Page Test">
+            <parameter name="browser" value="firefox" />
+                 <parameter name="url"
+                value="https://www.orangehrm.com/30-day-free-trial/" />
+            <parameter name="headless" value="true" />
+
+
+            <classes>
+                <class name="com.qa.opencartTest.RegisterationPageTest" />
+            </classes>
+        </test>-->
 
 </suite>
